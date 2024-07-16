@@ -1,19 +1,33 @@
-import { useCoinsData } from '@/hooks/useCoinsData';
-import Image from 'next/image';
-import React from 'react';
+import { useCoinsData } from "@/hooks/useCoinsData";
+import { Spin, Row, Col } from "antd/lib";
+import React from "react";
+import styles from "./coins.module.scss";
+import CoinCart from "@/components/CoinCart";
 
-function CoinsMarkets () {    
-    const { data, isLoading, error } = useCoinsData();    
-    
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error fetching coins</div>;
+function CoinsMarkets() {
+  const { data, isLoading, error } = useCoinsData();
 
-    return <div>
-        {data.map(item=><li key={item.id}>
-            <Image src={item.image} width={100} height={100} alt={item.name} />
-            <p>{item.name} {item.symbol} {item.current_price} {item.high_24h} {item.low_24h}</p></li>)}
-    </div>
+  if (isLoading) {
+    return <Spin fullscreen size="large" />;
+  }
+  if (error) {
+    return <div>Error fetching coins</div>;
+  }
 
+  return (
+    <section className={styles.coinsMarketsWrapper}>
+      <h1>Coins Markets</h1>
+      <div className={styles.coinsMarkets}>
+        <Row gutter={[16, 16]}>
+          {data?.map((item) => (
+            <Col xs={24} xl={8} key={item.id}>
+              <CoinCart item={item} />
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </section>
+  );
 }
 
 export default CoinsMarkets;

@@ -1,18 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project displaying the coins markets, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Run the app in dev mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+
+Run the app in prod mode (please do not use this now, there is a small issue with jest configuration, that causes now the build to fail):
+
+```bash
+npm start
+```
+
+Build the app
+
+```bash
+npm run build
+```
+
+Node.js recommended version 18.17.1
+
+There might be CORS related issue for getting the data from API, so please disable the cors in case it happens. Here is a guide how it can be done: https://stackoverflow.com/questions/57552185/how-to-disable-cors-in-chrome-mac
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

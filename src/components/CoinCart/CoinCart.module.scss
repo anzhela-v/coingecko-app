@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  gap: 20px;
+
+  .coinInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+  .coinName {
+    span {
+      color: #777;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .rateChanges {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+
+    .highRate {
+      color: #a0d911;
+    }
+
+    .lowRate {
+      color: #cf1322;
+    }
+  }
+}
