@@ -4,12 +4,12 @@ This is a [Next.js](https://nextjs.org/) project displaying the coins markets, b
 
 Urls
 http://localhost:3000/coins/markets
-```bash
-npm install
-```
 
 Run to install dependencies
 
+```bash
+npm install
+```
 
 Run the app in dev mode:
 
