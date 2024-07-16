@@ -9,9 +9,13 @@ function Coin() {
   const { id } = router.query;
   const { data, isLoading, error } = useCoinData(id as string);
 
-  if (!id || isLoading) return <Spin fullscreen size="large" />;
+  if (!id || isLoading) {
+    return <Spin fullscreen size="large" />;
+  }
 
-  if (error) return <div>Error fetching coin</div>;
+  if (error) {
+    return <div>Error fetching coin</div>;
+  }
 
   return (
     <Card>
