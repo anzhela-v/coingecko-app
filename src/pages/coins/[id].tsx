@@ -23,7 +23,7 @@ function Coin() {
         <p>{data.hashing_algorithm}</p>
         <p className={styles.coinDescription}>{data.description.en}</p>
 
-        <p>{data.market_cap?.eur}</p>
+        <p>{data.market_data?.market_cap?.eur}</p>
         <h4>{data.genesis_date} </h4>
 
         <a href={data.links.homepage[0]}>{data.links.homepage}</a>
