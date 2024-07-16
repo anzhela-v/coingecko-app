@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org/) project displaying the coins markets, b
 
 ## Getting Started
 
+Urls
+http://localhost:3000/coins/markets
+
 Run the app in dev mode:
 
 ```bash
